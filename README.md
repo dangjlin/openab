@@ -88,7 +88,7 @@ Swap backends using the `agent.preset` Helm value or manual config. Tested backe
 | (default) | Kiro CLI | Native `kiro-cli acp` | `kiro-cli login --use-device-flow` |
 | `codex` | Codex | [@zed-industries/codex-acp](https://github.com/zed-industries/codex-acp) | `codex login --device-auth` |
 | `claude` | Claude Code | [@agentclientprotocol/claude-agent-acp](https://github.com/agentclientprotocol/claude-agent-acp) | `claude setup-token` |
-| `gemini` | Gemini CLI | Native `gemini --acp` | Google OAuth or `GEMINI_API_KEY` |
+| `gemini` | Gemini CLI | Native `gemini --acp --approval-mode=yolo` | Google OAuth or `GEMINI_API_KEY` |
 
 ### Helm Install (recommended)
 
@@ -166,7 +166,7 @@ working_dir = "/tmp"
 # Gemini
 [agent]
 command = "gemini"
-args = ["--acp"]
+args = ["--acp", "--approval-mode=yolo"]
 working_dir = "/tmp"
 env = { GEMINI_API_KEY = "${GEMINI_API_KEY}" }
 ```

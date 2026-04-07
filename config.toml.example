@@ -21,7 +21,7 @@ working_dir = "/home/agent"
 
 # [agent]
 # command = "gemini"
-# args = ["--acp"]
+# args = ["--acp", "--approval-mode=yolo"]
 # working_dir = "/home/agent"
 # env = { GEMINI_API_KEY = "${GEMINI_API_KEY}" }
 

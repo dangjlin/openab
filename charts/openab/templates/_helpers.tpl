@@ -67,7 +67,7 @@ Resolve agent preset → args
 {{- define "openab.agent.args" -}}
 {{- if .Values.agent.preset }}
   {{- if or (eq .Values.agent.preset "codex") (eq .Values.agent.preset "claude") }}[]
-  {{- else if eq .Values.agent.preset "gemini" }}["--acp"]
+  {{- else if eq .Values.agent.preset "gemini" }}["--acp", "--approval-mode=yolo"]
   {{- else }}{{ .Values.agent.args | toJson }}
   {{- end }}
 {{- else }}{{ .Values.agent.args | toJson }}
